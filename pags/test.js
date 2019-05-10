@@ -1,36 +1,21 @@
-var preguntas = [];
+//variables
 var marcadorpreg = document.getElementById("marcpreg");
 var cont = document.getElementById("test");
 var preg = document.getElementById("pregunta");
-var r0 = document.getElementById("r0");
-var r1 = document.getElementById("r1");
-var r2 = document.getElementById("r2");
-var r3 = document.getElementById("r3");
 var rs = document.getElementsByClassName("respuesta");
 var npreg = 0;
 var respuesta;
 
-class pregunta{
-    constructor(id,p,r,c){
-        this.id = id;
-        this.p = p;
-        this.r = r;
-        this.c = c;
-    }
-}
+//debería crear una función para crear el html de las preguntas
 
 
-preguntas[0] = new pregunta (1,'Cual es la respuesta correcta?',['ano se','que me importa','prueba prueba prueba','l s s ff s s f'],1);
-
-
+//cambia los valores a los de la pregunta
 var mostrarPregunta = function(id){
     marcadorpreg.innerHTML = 'pregunta ' + preguntas[id].id;
     preg.innerHTML = preguntas[id].p;
-    r0.innerHTML = preguntas[id].r[0];
-    r1.innerHTML = preguntas[id].r[1];
-    r2.innerHTML = preguntas[id].r[2];
-    r3.innerHTML = preguntas[id].r[3];
-
+    for (var i = 0;i<4;i++) {
+        rs[i].innerHTML = preguntas[id].r[i];
+    }
 }
 
 mostrarPregunta(npreg);
@@ -41,6 +26,13 @@ for (var i = 0;i<4;i++) {
         function(event){
             respuesta = this.innerHTML;
             console.log(respuesta);
-            cont.innerHTML = respuesta == preguntas[npreg].r[preguntas[npreg].c] ? "CORRECTO" : "INCORRECTO";
+            cont.innerHTML = respuesta == preguntas[npreg].r[preguntas[npreg].c] ? "CORRECTO " : "INCORRECTO ";
+            var botsig = document.createElement("button");
+            botsig.innerHTML = "siguiente pregunta"
+            cont.appendChild(botsig);
+            botsig.addEventListener("click",function(){
+                npreg +=1
+                mostrarPregunta(npreg);
+            });
     });
 }

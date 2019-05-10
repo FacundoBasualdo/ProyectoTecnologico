@@ -1,3 +1,11 @@
+@keyframes selec {
+    from {background-color: rgb(236, 128, 240);}
+    to {background-color: rgb(0, 193, 252);}
+}
+@keyframes selecinfo {
+    from{left:-15}
+    to{left:35}
+}
 body{
     margin-left: 30px;
     margin-top: 10px;
@@ -6,11 +14,15 @@ body{
     padding:20px;
 }
 .op {
+    width:150px;
     height: 150px;
-    width: 150px;
+    left:0px;
+    transition: 400ms;
     background-color: rgb(236, 128, 240);
+    position: relative;
 }
 .op:hover{
+    left: 25px;
     background-color: rgb(0, 193, 252);
 }
 
@@ -24,7 +36,9 @@ body{
 
 .opmenuinfo{
     display: none;
+    position:relative;
+    animation: selecinfo 88ms;
+    left:35px;
     vertical-align: middle;
-    text-align: center;
-    
 }
+
