@@ -1,0 +1,30 @@
+body{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#contopciones{
+    padding:20px;
+}
+.op {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(236, 128, 240);
+}
+.op:hover{
+    background-color: rgb(0, 193, 252);
+}
+
+
+.opmenu{
+    height: 150px;
+    width: 150px;
+    display:inline-flex;
+    vertical-align: middle;
+}
+
+.opmenuinfo{
+    display: none;
+    vertical-align: middle;
+    text-align: center;
+    
+}
