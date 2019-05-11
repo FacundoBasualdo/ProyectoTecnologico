@@ -1,6 +1,6 @@
-@keyframes selec {
-    from {background-color: rgb(236, 128, 240);}
-    to {background-color: rgb(0, 193, 252);}
+@keyframes startup {
+    form{left:-100px;}
+    to{  left:0px;}
 }
 @keyframes selecinfo {
     from{left:-15}
@@ -9,7 +9,9 @@
 body{
     margin-left: 30px;
     margin-top: 10px;
+    
 }
+
 #contopciones{
     padding:20px;
 }
@@ -20,10 +22,13 @@ body{
     transition: 400ms;
     background-color: rgb(236, 128, 240);
     position: relative;
+    vertical-align: middle;
+    animation: startup 0.5s;
 }
 .op:hover{
     left: 25px;
     background-color: rgb(0, 193, 252);
+    box-shadow: -25px 0px 0 0 lightblue;
 }
 
 
@@ -36,9 +41,10 @@ body{
 
 .opmenuinfo{
     display: none;
-    position:relative;
     animation: selecinfo 88ms;
+    position:relative;
     left:35px;
     vertical-align: middle;
+    text-align: left;
 }
 
