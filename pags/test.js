@@ -1,8 +1,8 @@
 //variables
 var marcadorpreg = document.getElementById("marcpreg");
 var cont = document.getElementById("test");
-var preg = document.getElementById("pregunta");
-var rs = document.getElementsByClassName("respuesta");
+var preg = document.getElementById("preg");
+var rs = document.getElementsByClassName("resp");
 var npreg = 0;
 var respuesta;
 

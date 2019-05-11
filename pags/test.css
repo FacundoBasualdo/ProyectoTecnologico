@@ -2,3 +2,73 @@
     display:block;
     margin-top:10px;
 }
+
+
+
+@keyframes selecinfo {
+    from{left:-15}
+    to{left:35}
+}
+@font-face {
+    font-family: qhyts;
+    src: url("fonts/qhyts___.ttf");
+    src: 
+    url("fonts/qhyts___.ttf") format("woff"),
+    url("fonts/qhyts___.ttf") format("opentype"),
+    url("fonts/qhyts___.ttf") format("svg");
+}
+@font-face {
+    font-family: accu;
+    src: url("fonts/Accuratist.ttf");
+    src: 
+    url("fonts/Accuratist.ttf") format("woff"),
+    url("fonts/Accuratist.ttf") format("opentype"),
+    url("fonts/Accuratist.ttf") format("svg");
+}
+    
+
+body{
+    font-family: accu;
+    font-size: 40px;
+    background-color: beige;
+    margin-left: 10%;
+    width: 100%;
+}
+.bold{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(0, 193, 252);
+    font-synthesis: weight;
+}
+.test{
+    width: 50%;
+}
+#preg{
+    height: 100px;
+    width: 25%;
+    padding: 10px;
+    padding-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(0, 193, 252);
+}
+.resp {
+    left:0px;
+    transition: 400ms;
+    background-color: rgb(236, 128, 240);
+    font-family: accu;
+    font-size: 80%;
+    padding: 10px;
+    height: 100px;
+    position: relative;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: -0px 0px 0 0 pink;
+}
+.resp:hover{
+    left: 20px;
+    background-color: rgb(0, 193, 252);
+    box-shadow: -20px 0px 0 0 lightblue;
+}
